@@ -18,6 +18,11 @@ This should compile as soon as you import the qt project.
 MY WHINING:
 ~~~~~~~
 This project was originally made with QtCreator.
+
+It's ok to build it as long as you're in QtCreator
+comfort zone with nice GUI designer and stuff
+and everything just worked from the first time.
+
 Compiles and runs, no problem. As soon as it got copied
 to this repo and reopened it stops compiling.
 
