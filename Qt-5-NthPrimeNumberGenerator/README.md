@@ -34,5 +34,5 @@ level of it's developers.
 
 Good job Qt!
 
-My rating of ease of use when creating this project: 6.7
+My rating of ease of use when creating this project: 6.2
 ~~~~~~~
