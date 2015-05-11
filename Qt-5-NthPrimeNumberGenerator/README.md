@@ -1,4 +1,7 @@
 
+This project was originally made with
+QtCreator 3.3.2 Community Edition (Qt 5.4.1)
+
 This should compile as soon as you import the qt project.
 
 
@@ -17,8 +20,6 @@ This should compile as soon as you import the qt project.
 
 MY WHINING:
 ~~~~~~~
-This project was originally made with QtCreator.
-
 It's ok to build it as long as you're in QtCreator
 comfort zone with nice GUI designer and stuff
 and everything just worked from the first time.
