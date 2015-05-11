@@ -1,0 +1,17 @@
+description "Calculate Nth prime number\377";
+
+uses
+	CtrlLib;
+
+options(GCC) -I$(TEMPLATIOUS_DIR);
+
+file
+	messeagable.h,
+	mainwindow_interface.h,
+	domain.h,
+	domain.cpp,
+	main.cpp;
+
+mainconfig
+	"" = "GUI MT SSE2";
+
