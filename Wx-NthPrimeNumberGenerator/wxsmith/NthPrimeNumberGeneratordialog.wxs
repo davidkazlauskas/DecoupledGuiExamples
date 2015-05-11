@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="NthPrimeNumberGeneratorDialog">
+		<title>Nth prime number generator</title>
+		<size>400,122</size>
+		<minsize>400,122</minsize>
+		<maxsize>400,122</maxsize>
+		<id_arg>0</id_arg>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="TextCtrl1" member="yes">
+			<pos>8,8</pos>
+			<size>384,27</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+			<label>Press GO to calculate nth prime number</label>
+			<pos>16,40</pos>
+			<size>368,16</size>
+		</object>
+		<object class="wxGauge" name="ID_GAUGE1" variable="Gauge1" member="yes">
+			<pos>8,64</pos>
+			<size>384,24</size>
+		</object>
+		<object class="wxButton" name="ID_BUTTON1" variable="Button1" member="yes">
+			<label>GO</label>
+			<pos>8,88</pos>
+			<size>384,29</size>
+		</object>
+	</object>
+</wxsmith>
