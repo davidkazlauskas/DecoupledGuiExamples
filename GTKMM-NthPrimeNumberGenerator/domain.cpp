@@ -62,6 +62,11 @@ void initDomain(std::shared_ptr< Messageable > mainWindow) {
                     Msg::InSetButtonEnabled(), true
                 );
                 if (num > 0) {
+                    // make a weak pointer because main window could
+                    // have quitted when in our second thread,
+                    // therefore avoid using freed memory.
+                    std::weak_ptr< Messageable > wptr = mainWindow;
+
                     // number parsing succeeded,
                     // launch new thread for calculation
                     std::thread([=]() {
@@ -81,6 +86,13 @@ void initDomain(std::shared_ptr< Messageable > mainWindow) {
                                     float progress = (static_cast<float>(primeCount) / num) * 100;
                                     int progInt = static_cast<int>(progress);
 
+                                    // lock weak pointer
+                                    auto locked = wptr.lock();
+                                    if (wptr.expired()) {
+                                        // main window dead, return
+                                        return;
+                                    }
+
                                     // this message needs to be sent across threads
                                     // so we allocate virtual pack on the heap wrapped
                                     // inside shared_ptr with SF::vpackPtr.
@@ -93,9 +105,9 @@ void initDomain(std::shared_ptr< Messageable > mainWindow) {
 
                                     // send messages across threads
                                     // send label update
-                                    raw->message(msg);
+                                    locked->message(msg);
                                     // send progress bar update
-                                    raw->message(progMsg);
+                                    locked->message(progMsg);
                                 }
                             }
                         }
