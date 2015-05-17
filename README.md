@@ -1,5 +1,6 @@
 This repository contains examples of loose coupling
 using virtual packs from templatious library.
+[![Build Status](https://travis-ci.org/davidkazlauskas/DecoupledGuiExamples.svg)](https://travis-ci.org/davidkazlauskas/DecoupledGuiExamples)
 
 The program is simple - calculate nth prime number
 asynchronously from gui in separate thread while updating
