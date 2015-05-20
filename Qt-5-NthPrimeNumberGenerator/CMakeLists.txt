@@ -12,5 +12,5 @@ ADD_DEFINITIONS(
 )
 
 include_directories( $ENV{TEMPLATIOUS_DIR} ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR} )
-add_executable( generator mainwindow.cpp domain.cpp ${MOCSrcs} )
+add_executable( generator main.cpp mainwindow.cpp domain.cpp ${MOCSrcs} )
 target_link_libraries( generator ${QT_LIBRARIES} pthread )
