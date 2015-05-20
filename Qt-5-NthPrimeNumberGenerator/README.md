@@ -4,6 +4,15 @@ QtCreator 3.3.2 Community Edition (Qt 5.4.1)
 
 This should compile as soon as you import the qt project.
 
+### UPDATE
+
+Now this can be compiled with cmake:
+~~~~~~~
+mkdir build
+cd build
+cmake ..
+make
+~~~~~~~
 
 
 
@@ -36,4 +45,6 @@ level of it's developers.
 Good job Qt!
 
 My rating of ease of use when creating this project: 6.2
+
+UPDATE: I compiled this with cmake, so, +2 for rating: 8.2
 ~~~~~~~
