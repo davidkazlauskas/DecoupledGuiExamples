@@ -11,6 +11,6 @@ ADD_DEFINITIONS(
     -std=c++11
 )
 
-include_directories( $ENV{TEMPLATIOUS_DIR} )
+include_directories( $ENV{TEMPLATIOUS_DIR} ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR} )
 add_executable( generator mainwindow.cpp domain.cpp ${MOCSrcs} ${UISrcs})
 target_link_libraries( generator ${QT_LIBRARIES} )
