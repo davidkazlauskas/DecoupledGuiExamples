@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <QMetaType>
 #include <QMainWindow>
 #include <templatious/FullPack.hpp>
 
