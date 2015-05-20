@@ -8,6 +8,7 @@ before_install:
     - sudo apt-get update
 
 install:
+    - sudo apt-get install libqt4-dev
     - sudo apt-get install g++-4.8 && export CXX=g++-4.8
     - sudo apt-get install libgtkmm-3.0-dev
 
@@ -21,8 +22,21 @@ before_script:
     - mkdir build
     - pushd build
     - cmake ..
+    - popd
+    - popd
+    - pushd Qt-5-NthPrimeNumberGenerator
+    - mkdir build
+    - pushd build
+    - cmake ..
+    - popd
+    - popd
 
-script: make
+script:
+    - pushd GTKMM-NthPrimeNumberGenerator/build
+    - make
+    - popd
+    - pushd Qt-5-NthPrimeNumberGenerator/build
+    - make
 
 env:
     - TEMPLATIOUS_DIR=$TRAVIS_BUILD_DIR/TemplatiousLib
