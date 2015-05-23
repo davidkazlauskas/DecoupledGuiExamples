@@ -6,7 +6,14 @@ This should compile as soon as you import the qt project.
 
 ### UPDATE
 
-Now this can be compiled with cmake:
+Now this can be compiled with cmake.
+
+Library dependencies:
+~~~~~~~
+sudo apt-get install libqt4-dev
+~~~~~~~
+
+To build (default compiler):
 ~~~~~~~
 mkdir build
 cd build
@@ -14,16 +21,13 @@ cmake ..
 make
 ~~~~~~~
 
-
-
-
-
-
-
-
-
-
-
+To use specific compiler (for instance, clang++-3.5):
+~~~~~~~
+mkdir build
+cd build
+cmake -DCMAKE_CXX_COMPILER=clang++-3.5 ..
+make
+~~~~~~~
 
 
 

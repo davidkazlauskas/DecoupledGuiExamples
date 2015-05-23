@@ -7,8 +7,7 @@ sudo apt-get install libgtkmm-3.0-dev
 TEMPLATIOUS_DIR enviroment variable should be defined
 and point to templatious library.
 
-To compile simply run (linux ubuntu 14.04):
-
+To build with default compiler simply run (linux ubuntu 14.04):
 ~~~~~~~
 mkdir build
 cd build
@@ -16,9 +15,13 @@ cmake ..
 make
 ~~~~~~~
 
-
-
-
+To use specific compiler (for instance, clang++-3.5):
+~~~~~~~
+mkdir build
+cd build
+cmake -DCMAKE_CXX_COMPILER=clang++-3.5 ..
+make
+~~~~~~~
 
 
 MY WHINING:
